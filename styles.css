@@ -1,27 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #book-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  .button {
-    cursor: pointer;
-    color:  grey;   
-  }
-  .book-card {
-    background-color: #cf9f9f;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .modal {
+    background-color: rgb(190, 112, 112);
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.headline, .description {
+    padding: 2rem;
+}
+
+.button {
+    margin-left: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    color: white;
+    background-color: #ac7878;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -30,43 +26,60 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 20% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .close {
-    color: #aaa;
+    width: 40%;
+}
+
+.close {
     float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
     cursor: pointer;
-  }
-  
-  #new-book-form label {
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  #new-book-form input[type="text"],
-  #new-book-form input[type="number"],
-  #new-book-form input[type="checkbox"],
-  #new-book-form button {
-    margin-bottom: 10px;
-  }
-  
-  
+}
+
+.book-card {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.book-title {
+    font-weight: bold;
+}
+
+.book-author {
+    font-style: italic;
+}
+
+.book-pages {
+    font-size: smaller;
+}
+
+.book-status {
+    font-weight: bold;
+}
+
+.remove-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Responsive grid layout */
+@media only screen and (min-width: 768px) {
+    #book-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
