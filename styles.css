@@ -11,7 +11,7 @@ body {
 .button {
     margin-left: 1.5rem;
     padding: 1rem 2rem;
-    border-radius: 15px;
+    
     color: rgb(28, 26, 26);
     background-color: #f6f3f3;
     font-family: 'Courier New', Courier, monospace;
@@ -21,6 +21,15 @@ body {
     cursor: pointer;
     color: white;
     background-color: green;
+}
+#read {
+    margin-left: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    color: rgb(28, 26, 26);
+    background-color: #f6f3f3;
+    font-family: 'Courier New', Courier, monospace;
+    text-align:end;
 }
 .modal {
     display: none;
